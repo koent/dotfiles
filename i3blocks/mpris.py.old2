@@ -1,0 +1,118 @@
+#!/usr/bin/env python3
+
+import gi
+gi.require_version('Playerctl', '2.0')
+from gi.repository import Playerctl, GLib
+
+manager = Playerctl.PlayerManager()
+
+text = ""
+short = ""
+color = ""
+
+player_active = None
+
+c_play = "#ffffff"
+c_pause = "#aaaaaa"
+
+def update():
+    global text
+    global short
+    global color
+    print(text)
+    print(short)
+    print(color)
+
+def update2(_a=None, _b=None, _c=None):
+	if (len(Playerctl.list_players()) == 0):
+		print("\n\n")
+		return False
+
+	p = Playerctl.Player()
+	print('{artist}: {title}'.format(artist=p.get_artist(), title=p.get_title()).lower())
+	print(p.props.player_name.lower())
+	print(c_play if p.props.playback_status.value_nick == "Playing" else c_pause)
+	return True
+
+def set_text(artist, title):
+	newtext = '{artist}: {title}'.format(artist=artist, title=title).lower()
+	global text
+	if (text == newtext):
+		return False
+	text = newtext
+	return True
+
+def set_short(string):
+	global short
+	short = string
+
+def set_color(c_color):
+	global color
+	color = c_color
+
+def on_metadata(player, metadata, manager):
+	update2()
+#	if 'xesam:artist' in metadata.keys() and 'xesam:title' in metadata.keys():
+#		if set_text(metadata['xesam:artist'][0], metadata['xesam:title']):
+#			update()
+
+
+def on_play(player, status, manager):
+	update2()
+#	set_color(c_play)
+#	update()
+
+def on_pause(player, status, manager):
+	update2()
+#	set_color(c_pause)
+#	update()
+
+def init_player(name):
+	player_active = Playerctl.list_players()[0]
+	player = Playerctl.Player.new_from_name(name)
+	player.connect('metadata', on_metadata, manager)
+	player.connect('playback-status::playing', on_play, manager)
+	player.connect('playback-status::paused', on_pause, manager)
+#	set_short(name.name)
+#	set_text(player.get_artist(), player.get_title())
+#	set_color(c_play if player.props.playback_status.value_nick == 'Playing' else c_pause)
+	update2()
+	manager.manage_player(player)
+
+def on_name_appeared(manager, name):
+	update2()
+#	init_player(name)
+
+manager.connect('name-appeared', on_name_appeared)
+
+for name in manager.props.player_names:
+	init_player(name)
+
+
+
+'''
+name = Playerctl.list_players()[0].name
+player = Playerctl.Player()
+text = ""
+short = player.props.player_name
+color = ""
+
+def update():
+	global text
+	global short
+	global color
+	print(text)
+	print(short)
+	print(color)
+
+#https://github.com/altdesktop/playerctl
+#https://github.com/altdesktop/playerctl/blob/master/examples/player-manager.py
+
+
+player.connect('metadata', on_metadata)
+'''
+
+main = GLib.MainLoop()
+main.run()
+
+

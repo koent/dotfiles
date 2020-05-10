@@ -1,5 +1,8 @@
 #!/bin/bash
 
-ln -s $HOME/.config/i3 i3
-ln -s $HOME/.mutt mutt
+HERE=`pwd`
+
+ln -s ${HERE}/i3/ ~/.config/i3
+ln -s ${HERE}/mutt/ ~/.mutt
+ln -s ${HERE}/i3blocks ~/.config/i3blocks
 

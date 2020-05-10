@@ -1,5 +1,5 @@
 ### Dependencies
-    sudo apt install i3 scrot imagemagick jq rofi feh i3blocks compton kdeconnect
+    sudo apt install i3 scrot imagemagick jq rofi feh i3blocks compton kdeconnect acpi curl
 
     sudo pip3 install i3ipc
 
