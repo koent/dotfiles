@@ -1,0 +1,8 @@
+set from = "Koen.Timmermans.6457@student.uu.se"
+
+set smtp_url = "smtp://localhost:1025/"
+set smtp_pass = `cat /home/koen/.mutt/uuaccount`
+set imap_user = "Koen.Timmermans.6457@student.uu.se"
+set imap_pass = `cat /home/koen/.mutt/uuaccount`
+set folder = "imap://localhost:1143/"
+set spoolfile = "+INBOX"

@@ -1,0 +1,85 @@
+# http://www.mutt.org/doc/manual/#ignore
+# https://gitlab.com/muttmua/mutt/blob/master/contrib/sample.muttrc-starter
+set realname = "Koen Timmermans"
+set use_from = yes # Mijn naam in From: zetten
+set envelope_from = yes # Ook zo iets
+
+# Mailbox-specifiek:
+#source /home/koen/.mutt/rumail
+
+# typ G voor ontvangen
+bind index G imap-fetch-mail
+
+set editor = "nano"
+set charset = "utf-8"
+set record = '' # Geen backup van verzonden berichten
+set sort = reverse-date-received
+set pager_stop # Niet naar volgende bericht aan het einde
+unset markers # Geen plusjes links
+#set quit = ask-yes
+set header_cache = "/home/koen/.mutt/hcache"
+set fast_reply
+set index_format = "%3C %S  %s %*   %-30.30L  %{%d %b %H:%M} "
+set pager_format = "%C/%m: %s %*  %-20.20n  %{%d %b %H:%M} -- (%P)"
+set include # Antwoord quoten als je antwoord geeft
+set mark_old = no
+set autoedit = yes # Eerst bericht en dan 'aan'
+set edit_headers = yes
+#set menu_context = 3 # Eerder naar volgende pagina gaan
+#set new_mail_command =  # Wat doen bij nieuwe mail. notificatie?
+
+ignore x-mailer # Deze headers negeren
+
+
+# Pijltjes en scrollen
+bind pager <Down> next-line
+bind pager <Up> previous-line
+
+macro index N "<toggle-new><previous-undeleted>"
+
+# Kleurtjes 
+#color index default default "~U" #unread
+# :'( https://github.com/neomutt/neomutt/issues/518
+# We moeten zelf alle achtergronden weer 'black' maken, anders worden ze echt zwart
+# https://jonasjacek.github.io/colors/
+# https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg
+# https://github.com/altercation/mutt-colors-solarized/blob/master/mutt-colors-solarized-dark-16.muttrc
+#:
+#color message default black
+#color prompt default black
+#color error default black
+#color compose header default black
+#color compose security_none default black
+
+#color index color250 black ".*"			# De rest
+##color index color250 black "~p"		# Naar mij direct - zie N of O
+##color index color15 black "~U"			# Ongelezen - zie +
+#color index blue black "~f \".*@thalia.nu|sigma@science.ru.nl|.*@hashru.nl|.*@wssvijzersterk.nl|.*@decycloop.com|olympus@science.ru.nl\"" # Van andere verenigingen
+#color index color39 black "~f \".*@desda.org\""	# Van Desda
+#color index color106 black "~t \"bartjens*\""	# Batjes groen
+#color index color214 black "~C \"rva@desda.org*\""	# Rva oranje
+#color index color204 black "~C \"www-desda.*|wwwcie.*\""	# www-cie rood
+#color index color85 black "~C \"belinda@.*\""	# Belinda groenblauw
+#color index color45 black "~C \"sigma-studycee@.*\"" # Studiecie lichtblauw
+
+# HTML-mail openen
+set mailcap_path = "/home/koen/.mutt/mailcap"
+alternative_order text/plain text/html
+auto_view text/html
+folder-hook . `rm -f /tmp/mutt/*` # Tijdelijke bijlagemap leeg
+
+#Zwartwit
+color status black white
+color indicator white color8
+color normal white default
+color message default default
+color prompt default default
+color error default default
+color compose header default default
+color compose security_none default default
+color hdrdefault blue default
+color tree blue default
+color attachment yellow default
+color tilde default default
+color signature white default
+color quoted green default

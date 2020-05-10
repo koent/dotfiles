@@ -1,0 +1,9 @@
+set from = "kahtimmermans@gmail.com"
+
+set smtp_url = "smtps://kahtimmermans@gmail.com@smtp.gmail.com:465/"
+set smtp_pass = `cat /home/koen/.mutt/gmaccount`
+set imap_user = "kahtimmermans@gmail.com"
+set imap_pass = `cat /home/koen/.mutt/gmaccount`
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set ssl_force_tls = yes

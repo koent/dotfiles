@@ -1,0 +1,8 @@
+set from = "k.timmermans@student.ru.nl"
+
+set smtp_url = "smtp://localhost:1025/"
+set smtp_pass = `cat /home/koen/.mutt/ruaccount`
+set imap_user = "k.timmermans@student.ru.nl"
+set imap_pass = `cat /home/koen/.mutt/ruaccount`
+set folder = "imap://localhost:1143/"
+set spoolfile = "+INBOX"

@@ -1,0 +1,11 @@
+text/html;  /usr/bin/firefox %s >/dev/null 2>&1; needsterminal
+text/html;  elinks -dump %s; nametemplate=%s.html; copiousoutput
+#application/pdf; mkdir -p /tmp/mutt \; cp %s /tmp/mutt \; evince /tmp/mutt/$(basename %s) &
+application/pdf; less %s; copiousoutput
+image/png;  mkdir -p /tmp/mutt \; cp %s /tmp/mutt \; feh /tmp/mutt/$(basename %s) &
+image/gif;  mkdir -p /tmp/mutt \; cp %s /tmp/mutt \; feh /tmp/mutt/$(basename %s) &
+image/jpg;  mkdir -p /tmp/mutt \; cp %s /tmp/mutt \; feh /tmp/mutt/$(basename %s) &
+image/jpeg;  mkdir -p /tmp/mutt \; cp %s /tmp/mutt \; feh /tmp/mutt/$(basename %s) &
+image/bmp;  mkdir -p /tmp/mutt \; cp %s /tmp/mutt \; feh /tmp/mutt/$(basename %s) &
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; mkdir -p /tmp/mutt \; cp %s /tmp/mutt \; lowriter /tmp/mutt/$(basename %s) &
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; mkdir -p /tmp/mutt \; cp %s /tmp/mutt \; localc /tmp/mutt/$(basename %s) &
