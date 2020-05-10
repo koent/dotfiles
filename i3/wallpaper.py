@@ -6,8 +6,10 @@ import signal
 import sys
 
 wallpaper_name = 'CGPGrey' #'pA4nMSi'
-empty_wallpaper = '/home/koen/Afbeeldingen/'+wallpaper_name+'.jpg'
-full_wallpaper =  '/home/koen/Afbeeldingen/'+wallpaper_name+'_25.jpg'
+dir = sys.path[0]+'/wallpapers/'
+
+empty_wallpaper = dir+wallpaper_name+'.jpg'
+full_wallpaper =  dir+wallpaper_name+'_25.jpg'
 i3 = i3ipc.Connection()
 
 def update_wallpaper():
