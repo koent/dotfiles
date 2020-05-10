@@ -1,10 +1,10 @@
 ### Dependencies
-    sudo apt install i3 scrot imagemagick jq rofi feh i3blocks compton kdeconnect acpi curl
+    sudo apt install i3 scrot imagemagick jq rofi feh i3blocks compton kdeconnect acpi curl python3-pip playerctl libplayerctl-dev sleepenh
 
-    sudo pip3 install i3ipc
+    sudo pip3 install i3ipc pydbus
 
 ### Ook handig
-    sudo apt install keepassxc python3-pip lxappearance
+    sudo apt install keepassxc lxappearance mutt
 
 ### Install
 Voer `install.sh` uit. Daarna nog handmatig wachtwoorden in `ruaccount`, `gmaccount`, en `uuaccount` zetten.
