@@ -17,7 +17,7 @@ set sort = reverse-date-received
 set pager_stop # Niet naar volgende bericht aan het einde
 unset markers # Geen plusjes links
 #set quit = ask-yes
-set header_cache = "/home/koen/.mutt/hcache"
+set header_cache = "~/.mutt/hcache"
 set fast_reply
 set index_format = "%3C %S  %s %*   %-30.30L  %{%d %b %H:%M} "
 set pager_format = "%C/%m: %s %*  %-20.20n  %{%d %b %H:%M} -- (%P)"
@@ -63,7 +63,7 @@ macro index N "<toggle-new><previous-undeleted>"
 #color index color45 black "~C \"sigma-studycee@.*\"" # Studiecie lichtblauw
 
 # HTML-mail openen
-set mailcap_path = "/home/koen/.mutt/mailcap"
+set mailcap_path = "~/.mutt/mailcap"
 alternative_order text/plain text/html
 auto_view text/html
 folder-hook . `rm -f /tmp/mutt/*` # Tijdelijke bijlagemap leeg
