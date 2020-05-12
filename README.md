@@ -4,7 +4,7 @@
     sudo pip3 install i3ipc pydbus
 
 ### Ook handig
-    sudo apt install keepassxc lxappearance mutt gimp
+    sudo apt install keepassxc lxappearance mutt gimp texlive
 
 ### Install
 Voer `install.sh` uit. Daarna nog handmatig wachtwoorden plaatsen in:
