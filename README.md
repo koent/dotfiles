@@ -4,7 +4,7 @@
     sudo pip3 install i3ipc pydbus
 
 ### Ook handig
-    sudo apt install keepassxc lxappearance mutt
+    sudo apt install keepassxc lxappearance mutt gimp
 
 ### Install
 Voer `install.sh` uit. Daarna nog handmatig wachtwoorden plaatsen in:
