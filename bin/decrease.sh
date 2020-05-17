@@ -1,6 +1,6 @@
 #! /bin/bash
 
-cd "/usr/local/lib/brightnessctl"
+cd "/home/koen/.dotfiles/bin"
 source configuration.sh
 
-sudo /usr/local/bin/brightness `expr $currentBright "*" $noemer / $teller`
+sudo ./writebrightness.sh `expr $currentBright "*" $noemer / $teller`

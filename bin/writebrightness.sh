@@ -1,6 +1,6 @@
 #! /bin/bash
 
-cd "/usr/local/lib/brightnessctl"
+cd "/home/koen/.dotfiles/bin"
 source configuration.sh
 if [ -z "$1" ]
 then
