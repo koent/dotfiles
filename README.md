@@ -30,3 +30,6 @@ In `/etc/systemd/logind.conf`, voeg toe:
     LidSwitchIgnoreInhibited=no 
 
 Zie ook https://apiraino.github.io/2018/08/06/ubuntu_gnome_power.html
+
+### Lettertype i3bar fixen
+We gebruiken Open Sans 11px. Deze moet in `/usr/share/fonts/truetype/` geplaatst worden. Misschien heb je ook `libpango1.0-dev` nodig.
