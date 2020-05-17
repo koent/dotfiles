@@ -212,10 +212,10 @@ bindsym $mod+F11 exec --no-startup-id pactl set-sink-volume 0 +5% && pkill -RTMI
 bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 bindsym --release Shift+Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 
-bindsym XF86MonBrightnessDown exec --no-startup-id brightness- && pkill -RTMIN+10 i3blocks
-bindsym XF86MonBrightnessUp exec --no-startup-id brightness+ && pkill -RTMIN+10 i3blocks
-bindsym $mod+F3 exec --no-startup-id brightness- && pkill -RTMIN+10 i3blocks
-bindsym $mod+F4 exec --no-startup-id brightness+ && pkill -RTMIN+10 i3blocks
+bindsym XF86MonBrightnessDown exec --no-startup-id /home/koen/.dotfiles/bin/decrease.sh && pkill -RTMIN+10 i3blocks
+bindsym XF86MonBrightnessUp exec --no-startup-id  /home/koen/.dotfiles/bin/increase.sh && pkill -RTMIN+10 i3blocks
+#bindsym $mod+F3 exec --no-startup-id brightness- && pkill -RTMIN+10 i3blocks
+#bindsym $mod+F4 exec --no-startup-id brightness+ && pkill -RTMIN+10 i3blocks
 
 bindsym $mod+n exec nautilus
 bindsym Pause exec playerctl play-pause && pkill -RTMIN+10 i3blocks
