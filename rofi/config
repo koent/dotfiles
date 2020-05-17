@@ -1,0 +1,4 @@
+rofi.matching: fuzzy
+rofi.theme: dmenu2
+rofi.display-run: ​
+# zero width space^
