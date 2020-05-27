@@ -4,7 +4,7 @@
     sudo pip3 install i3ipc pydbus
 
 ### Ook handig
-    sudo apt install keepassxc lxappearance mutt gimp texlive vlc git htop wine64 neofetch ncdu minizinc minizinc-ide youtube-dl units
+    sudo apt install keepassxc lxappearance mutt gimp texlive vlc git htop wine64 neofetch ncdu minizinc minizinc-ide youtube-dl units xournal
 
 ### Install
 1. Clone deze repo

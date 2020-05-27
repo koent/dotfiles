@@ -170,6 +170,7 @@ bar {
     tray_output primary
 	colors {
 		focused_workspace  #000000 #000000 #FFFFFF
+		active_workspace   #000000 #000000 #FFFFFF
 		urgent_workspace   #FF0000 #FF0000 #FFFFFF
 		inactive_workspace #000000 #000000 #888888
 		binding_mode       #000000 #000000 #FF0000
@@ -178,6 +179,17 @@ bar {
 	strip_workspace_numbers yes
 	tray_padding 0
 }
+
+# Kleuren
+# class                 border  backgr. text    indicator child_border
+client.focused          #000000 #000000 #ffffff #2e9ef4   #000000
+client.focused_inactive #000000 #000000 #ffffff #484e50   #000000
+client.unfocused        #000000 #000000 #888888 #292d2e   #000000
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff
+
 
 # Opstartscripts
 #exec --no-startup-id xinput --set-prop 9 'libinput Natural Scrolling Enabled' 1
