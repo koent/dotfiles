@@ -34,6 +34,7 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+dead_grave exec i3-sensible-terminal
+bindsym $mod+KP_Enter exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -197,7 +198,7 @@ client.background       #ffffff
 exec --no-startup-id /home/koen/.config/i3/touchpad.sh
 
 # Twee monitoren
-# exec --no-startup-id xrandr --output "HDMI-1-1" --right-of "eDP-1-1" --auto
+exec --no-startup-id xrandr --output "HDMI-1-1" --right-of "eDP-1-1" --auto
 
 bindsym $mod+l exec /home/koen/.config/i3/lock.sh
 #bindsym $mod+F2 exec feh -F /home/koen/.config/i3/b.png

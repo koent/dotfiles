@@ -4,7 +4,7 @@
     sudo pip3 install i3ipc pydbus
 
 ### Ook handig
-    sudo apt install keepassxc lxappearance mutt gimp texlive vlc git htop wine64 neofetch ncdu minizinc minizinc-ide youtube-dl units xournal toilet d-feet
+    sudo apt install keepassxc lxappearance mutt gimp texlive vlc git htop wine64 neofetch ncdu minizinc minizinc-ide youtube-dl units xournal toilet d-feet audacity pandoc openjdk-11-jdk openssh-server lm-sensors ibus-table-latex xboxdrv
 
 ### Install
 1. Clone deze repo
