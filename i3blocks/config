@@ -50,6 +50,9 @@ command=nmcli monitor | /home/koen/.config/i3blocks/wifi2.sh
 interval=persist
 markup=pango
 
+[bluetooth.sh]
+interval=30
+
 [schijf.sh]
 interval=30
 
