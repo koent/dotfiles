@@ -29,7 +29,10 @@ In `/etc/systemd/logind.conf`, voeg toe:
     HandleLidSwitchDocked=suspend
     LidSwitchIgnoreInhibited=no 
 
-Zie ook https://apiraino.github.io/2018/08/06/ubuntu_gnome_power.html
+Zie ook ~~https://apiraino.github.io/2018/08/06/ubuntu_gnome_power.html~~ https://apiraino.github.io/ubuntu-gnome-power/
+
+### Niet uitschakelen als je op de aanknop drukt
+In `/etc/systemd/logind.conf`, voeg `HandlePowerKey=ignore` toe.
 
 ### Lettertype i3bar fixen
 We gebruiken Open Sans 11px. Deze moet in `/usr/share/fonts/truetype/` geplaatst worden. Misschien heb je ook `libpango1.0-dev` nodig.
