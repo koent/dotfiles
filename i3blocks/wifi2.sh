@@ -5,7 +5,7 @@ pecho()
 
 interface=`nmcli device status | grep "wifi " | awk '{print $1}'`
 
-pecho "$(~/.config/i3blocks/wifi.sh | tail -n 1)"
+pecho "$(~/.dotfiles/i3blocks/wifi.sh | tail -n 1)"
 
 while read regel
 do

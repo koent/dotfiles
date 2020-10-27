@@ -229,6 +229,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id /home/koen/.dotfiles/bin/decr
 bindsym XF86MonBrightnessUp exec --no-startup-id  /home/koen/.dotfiles/bin/increase.sh && pkill -RTMIN+10 i3blocks
 #bindsym $mod+F3 exec --no-startup-id brightness- && pkill -RTMIN+10 i3blocks
 #bindsym $mod+F4 exec --no-startup-id brightness+ && pkill -RTMIN+10 i3blocks
+bindsym $mod+B exec --no-startup-id /home/koen/.dotfiles/i3/togglebluetooth.sh
 
 bindsym $mod+n exec nautilus
 bindsym Pause exec playerctl play-pause && pkill -RTMIN+10 i3blocks

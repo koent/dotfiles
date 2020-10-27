@@ -46,12 +46,14 @@ signal=12
 #interval=10
 
 [wifi2.sh]
-command=nmcli monitor | /home/koen/.config/i3blocks/wifi2.sh
+command=nmcli monitor | /home/koen/.dotfiles/i3blocks/wifi2.sh
 interval=persist
 markup=pango
 
-[bluetooth.sh]
-interval=30
+[bluetooth2.sh]
+command=rfkill event | /home/koen/.dotfiles/i3blocks/bluetooth2.sh
+interval=persist
+markup=pango
 
 [schijf.sh]
 interval=30
