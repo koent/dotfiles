@@ -5,11 +5,11 @@ import subprocess
 import signal
 import sys
 
-wallpaper_name = 'CGPGrey' #'pA4nMSi'
+wallpaper_name = 'hbxehwya7nm61_169' # 'CGPGrey' # 'pA4nMSi'
 dir = sys.path[0]+'/wallpapers/'
 
 empty_wallpaper = dir+wallpaper_name+'.jpg'
-full_wallpaper =  dir+wallpaper_name+'_25.jpg'
+full_wallpaper =  dir+wallpaper_name+'_blur.jpg'
 i3 = i3ipc.Connection()
 
 def update_wallpaper():
