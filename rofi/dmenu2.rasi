@@ -14,7 +14,7 @@
     anchor:     south;
     location:   south;
     width:      100%;
-    padding:    3px;
+    padding:    2px 3px 3px 3px;
     children:   [ horibox ];
 }
 
