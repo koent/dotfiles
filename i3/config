@@ -213,7 +213,7 @@ exec --no-startup-id /usr/lib/x86_64-linux-gnu/libexec/kdeconnectd
 #exec setxkbmap -layout us,ru -variant intl,
 exec --no-startup-id setxkbmap -option 'grp:shift_caps_toggle'
 exec --no-startup-id python3 /home/koen/.config/i3blocks/mpris.py > /tmp/log.out 2>&1
-
+exec --no-startup-id dunst
 
 # wissel 0 <-> 1 als volume veranderen niet werkt
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && pkill -RTMIN+10 i3blocks
@@ -232,6 +232,7 @@ bindsym XF86MonBrightnessUp exec --no-startup-id  /home/koen/.dotfiles/bin/incre
 bindsym $mod+B exec --no-startup-id /home/koen/.dotfiles/i3/togglebluetooth.sh
 
 bindsym $mod+n exec nautilus
+bindsym $mod+comma exec dunstctl set-paused toggle && pkill -RTMIN+11 i3blocks
 bindsym Pause exec playerctl play-pause && pkill -RTMIN+10 i3blocks
 
 hide_edge_borders both

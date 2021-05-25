@@ -1,5 +1,5 @@
 ### Dependencies
-    sudo apt install i3 scrot imagemagick jq rofi feh i3blocks compton kdeconnect acpi curl python3-pip playerctl libplayerctl-dev sleepenh plasma-browser-integration
+    sudo apt install i3 scrot imagemagick jq rofi feh i3blocks compton kdeconnect acpi curl python3-pip playerctl libplayerctl-dev sleepenh plasma-browser-integration 
 
     sudo pip3 install i3ipc pydbus
 
@@ -18,6 +18,9 @@
 4. Keepass wachtwoorden ergens vandaan halen
 
 5. Inloggen bij Firefox
+
+6. Dunst >1.5 installeren
+- Als het niet automatisch gaat, dan via github. `libxss-dev` en `libnotify-dev` installeren . Dan `make WAYLAND=0` als er geen wayland is.
 
 ### Slapen bij klep dicht fixen
 In `/etc/UPower/UPower.conf`, verander `IgnoreLid=false` in `IgnoreLid=true`.

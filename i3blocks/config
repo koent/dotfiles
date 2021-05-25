@@ -45,6 +45,10 @@ signal=12
 #[wifi.sh]
 #interval=10
 
+[dunst.sh]
+interval=300
+signal=11
+
 [wifi2.sh]
 command=nmcli monitor | /home/koen/.dotfiles/i3blocks/wifi2.sh
 interval=persist
