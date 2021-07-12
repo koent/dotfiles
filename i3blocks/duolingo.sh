@@ -5,13 +5,13 @@ then
   exit
 fi
 
-user="koen605272"
+user=".koen"
 pass=`cat ~/.config/i3blocks/duopass`
 comb="login=$user&password=$pass"
 
 if curl -s -d $comb -c /tmp/duocookies https://www.duolingo.com/login | grep response | grep OK > /dev/null
 then
-  res=`curl -b /tmp/duocookies https://www.duolingo.com/users/koen605272 2> /dev/null`
+  res=`curl -b /tmp/duocookies https://www.duolingo.com/users/$user 2> /dev/null`
   printf '%s' $res | jq ".site_streak"
   printf '%s' $res | jq ".site_streak"
 else
