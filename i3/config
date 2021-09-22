@@ -235,6 +235,8 @@ bindsym $mod+n exec nautilus
 bindsym $mod+comma exec dunstctl set-paused toggle && pkill -RTMIN+11 i3blocks
 bindsym Pause exec playerctl play-pause && pkill -RTMIN+10 i3blocks
 
+bindsym ctrl+space exec dunstctl close
+
 hide_edge_borders both
 default_border pixel 1
 default_floating_border normal
