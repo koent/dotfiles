@@ -4,7 +4,7 @@
     sudo pip3 install i3ipc pydbus
 
 ### Ook handig
-    sudo apt install keepassxc lxappearance gimp texlive vlc htop wine64 neofetch ncdu minizinc minizinc-ide youtube-dl units xournal toilet d-feet audacity pandoc openjdk-11-jdk openssh-server lm-sensors ibus-table-latex xboxdrv translate-shell pavucontrol
+    sudo apt install keepassxc lxappearance gimp texlive vlc htop wine64 neofetch ncdu minizinc minizinc-ide youtube-dl units xournal toilet d-feet audacity pandoc openjdk-11-jdk openssh-server lm-sensors ibus-table-latex xboxdrv translate-shell pavucontrol blueman
 
 ### Install
 1. Installeer de dependencies
@@ -31,7 +31,9 @@
 
 12. `sudo visudo` uitvoeren en `%sudo ALL=(root) NOPASSWD: /home/koen/.dotfiles/bin/writebrightness.sh` onderaan toevoegen
 
-13. Uitloggen en inloggen met i3
+13. kde-connect instellen: `kde-connect -l`, goede code zoeken, `kde-connect --pair -d code`
+
+14. Uitloggen en inloggen met i3
 
 ### Slapen bij klep dicht fixen
 In `/etc/UPower/UPower.conf`, verander `IgnoreLid=false` in `IgnoreLid=true`.

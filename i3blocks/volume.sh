@@ -7,7 +7,8 @@ out=`pactl list sinks | grep -P "\tVolume:" | tail -n 1 | grep -Po "\d+%"| head 
 echo $out
 echo $out
 
-if pactl list sinks | grep Mute | tail -n 1 | grep ja > /dev/null
+#if pactl list sinks | grep Mute | tail -n 1 | grep ja > /dev/null
+if pacmd list-sinks | grep "muted:" | tail -n 1 | grep yes > /dev/null
 then
   echo "#aaaaaa"
 fi
