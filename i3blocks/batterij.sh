@@ -1,7 +1,7 @@
 #!/bin/sh
 
 teller=`cat /sys/class/power_supply/BAT0/charge_now`
-noemer=`cat /sys/class/power_supply/BAT0/charge_full_design`
+noemer=`cat /sys/class/power_supply/BAT0/charge_full`
 percentage=`echo "scale=2;$teller*100/$noemer" | bc | sed 's/\./,/g'`
 eta=`acpi | awk '{print $5}'`
 eta=" $eta"
