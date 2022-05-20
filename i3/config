@@ -203,6 +203,7 @@ exec --no-startup-id xrandr --output "HDMI-1-1" --right-of "eDP-1-1" --auto
 bindsym $mod+l exec /home/koen/.config/i3/lock.sh
 #bindsym $mod+F2 exec feh -F /home/koen/.config/i3/b.png
 bindsym Print exec gnome-screenshot --interactive
+bindsym $mod+Shift+S exec gnome-screenshot --interactive
 
 exec --no-startup-id feh --bg-scale /home/koen/.config/i3/wallpapers/hbxehwya7nm61_169.jpg
 #exec_always --no-startup-id python3 /home/koen/.config/i3/wallpaper.py
