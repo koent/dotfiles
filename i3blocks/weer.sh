@@ -6,7 +6,8 @@ then
 fi
 #stadid="2757872" # Culemborg
 #stadid="2666199" # Uppsala
-stadid="2750053" # Nijmegen
+#stadid="2750053" # Nijmegen
+stadid="2747373" # Den Haag
 appid=`cat ~/.config/i3blocks/owmappid`
 req="http://api.openweathermap.org/data/2.5/weather?id=$stadid&appid=$appid&lang=nl&units=metric"
 res=`curl $req 2> /dev/null`
