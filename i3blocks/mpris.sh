@@ -1,5 +1,4 @@
 #!/bin/bash
-[[ `playerctl status` == "Playing" ]]; playing=$?
 artiest=`playerctl metadata -f '{{ lc(artist) }}'`
 titel=`playerctl metadata -f '{{ lc(title) }}'`
 text="$titel"
@@ -12,6 +11,7 @@ text="$titel"
 short=`playerctl status`
 echo $text
 echo $short
+[[ `playerctl status` == "Playing" ]]; playing=$?
 if (( $playing == 1 ))
 then
 	echo "#AAAAAA"
