@@ -29,11 +29,11 @@
 
 10. `. "$HOME/.dotfiles/profile.sh"` toevoegen onder .profile.   `. "$HOME/.dotfiles/bashrc.sh"` toevoegen onder .bashrc
 
-12. `sudo visudo` uitvoeren en `%sudo ALL=(root) NOPASSWD: /home/koen/.dotfiles/bin/writebrightness.sh` onderaan toevoegen
+11. `sudo visudo` uitvoeren en `%sudo ALL=(root) NOPASSWD: /home/koen/.dotfiles/bin/writebrightness.sh` onderaan toevoegen
 
-13. kde-connect instellen: `kde-connect -l`, goede code zoeken, `kde-connect --pair -d code`
+12. kde-connect instellen: `kdeconnect-cli -l`, goede code zoeken, `kdeconnect-cli --pair -d code`
 
-14. Uitloggen en inloggen met i3
+13. Uitloggen en inloggen met i3
 
 ### Slapen bij klep dicht fixen
 In `/etc/UPower/UPower.conf`, verander `IgnoreLid=false` in `IgnoreLid=true`.
