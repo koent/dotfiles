@@ -51,6 +51,7 @@ alias stubru="cvlc http://icecast.vrtcdn.be/stubru-high.mp3"
 alias p="python3 -i -c \"from math import *\""
 alias tra="rlwrap trans --shell"
 #alias vpn="sudo openvpn ~/.config/openvpn-ca-science.ovpn"
+alias vpn="builtin cd /etc/openvpn; sudo openvpn mullvad_be_bru.conf"
 alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -"
 alias please="sudo"
 filesize(){ stat "$@" -c %s | numfmt --to=iec; }

@@ -33,7 +33,9 @@
 
 12. kde-connect instellen: `kdeconnect-cli -l`, goede code zoeken, `kdeconnect-cli --pair -d code`
 
-13. Uitloggen en inloggen met i3
+13. Openvpn-bestanden downloaden van Mullval en `*.crt`, `*.conf` en `mullvad_userpass.txt` kopieren naar `/etc/openvpn`
+
+14. Uitloggen en inloggen met i3
 
 ### Slapen bij klep dicht fixen
 In `/etc/UPower/UPower.conf`, verander `IgnoreLid=false` in `IgnoreLid=true`.
