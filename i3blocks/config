@@ -59,6 +59,10 @@ command=rfkill event | /home/koen/.dotfiles/i3blocks/bluetooth2.sh
 interval=persist
 markup=pango
 
+[vpn.sh]
+interval=300
+signal=12
+
 [schijf.sh]
 interval=30
 
