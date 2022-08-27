@@ -236,6 +236,7 @@ bindsym $mod+n exec nautilus
 bindsym $mod+comma exec dunstctl set-paused toggle && pkill -RTMIN+11 i3blocks
 bindsym Pause exec playerctl play-pause && pkill -RTMIN+10 i3blocks
 bindsym $mod+y exec --no-startup-id /home/koen/.dotfiles/i3/togglevpn.sh
+bindsym $mod+Shift+y exec --no-startup-id /home/koen/.dotfiles/i3/changevpn.sh
 
 bindsym ctrl+space exec dunstctl close
 

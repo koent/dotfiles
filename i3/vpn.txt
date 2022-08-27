@@ -1,1 +1,1 @@
-mullvad_gb_all
+mullvad_be_bru
