@@ -1,6 +1,6 @@
 #!/bin/bash
 
-config="mullvad_be_bru"
+config=`cat $HOME/.dotfiles/i3/vpn.txt`
 source <(systemctl show openvpn@$config --no-page | grep ActiveState) # fills ActiveState
 
 
